@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">World Pear</a></li>
+                <li class="hideonmobile"><a href="#">Shop</a></li>
+                <li class="hideonmobile"><a href="#">Newstand</a></li>
+                <li class="hideonmobile"><a href="#">Who we are</a></li>
+                <li class="hideonmobile"><a href="#">My profile</a></li>
+                <li class="hideonmobile"><a href="#">Basker (3)</a></li>
+                <li onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Newstand</a></li>
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">Basker (3)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
