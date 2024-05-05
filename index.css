@@ -8,6 +8,10 @@ body {
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .flex {
   display: flex;
 }
@@ -54,6 +58,10 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+img {
+  object-fit: cover;
 }
 
 /* Header */
@@ -119,7 +127,7 @@ a.logo {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 30vh;
+  width: 40vh;
   background-color: grey;
   backdrop-filter: blur(10px);
   display: none;
@@ -132,10 +140,14 @@ a.logo {
   width: 100%;
 }
 .sidebar a {
+  margin: 0;
   width: 100%;
 }
 .menu-button {
   display: none;
+}
+.sidebar a:hover {
+  background-color: #c2c2c2;
 }
 @media (max-width: 800px) {
   .hideonmobile {
@@ -145,7 +157,7 @@ a.logo {
     display: block;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .sidebar {
     width: 100%;
   }
@@ -270,12 +282,32 @@ hr {
 }
 
 .cart {
-  justify-content: space-between;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  column-gap: 32px;
 }
 
+@media (max-width: 800px) {
+  
+  .cart {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+  
+}
+
+
+
+.list-items {
+  display: inline-grid;
+
+}
+
+.order {
+  display: inline-grid;
+}
 .list-item {
-  width: 821px;
+  width: 100%;
   height: 159px;
   margin-bottom: 31px;
   background-color: #fafaf5;
@@ -293,13 +325,33 @@ hr {
   display: inline;
 }
 
+ .cart {
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.list-item {
+  width: 100%;
+  height: 159px;
+  margin-bottom: 31px;
+  background-color: #fafaf5;
+  border-radius: 24px;
+  border: 2px solid #e6e6e6;
+  display: flex;
+  position: relative;
+}
+
+.image-item > img {
+  border-radius: 24px 0 0 24px;
+  overflow: hidden;
+  display: inline;
+}
+
 img {
   overflow: hidden;
 }
 
 .item-name {
-  width: 162px;
-  height: 26px;
   margin-top: 24px;
   margin-left: 24px;
   font-size: 20px;
@@ -308,37 +360,11 @@ img {
 }
 
 .item-price {
-  width: 92px;
-  height: 26px;
   margin-top: 4px;
   margin-left: 24px;
   color: #426b1f;
   font-size: 20px;
   font-weight: 600;
-  line-height: 130%;
-}
-.item-price-2 {
-  width: 102px;
-  height: 26px;
-  margin-top: 4px;
-  margin-left: 24px;
-  color: #426b1f;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 130%;
-}
-.item-price-3 {
-  width: 93px;
-  height: 26px;
-  margin-top: 4px;
-  margin-left: 24px;
-  color: #426b1f;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings: 'slnt' 0;
   line-height: 130%;
 }
 
@@ -398,7 +424,7 @@ img {
 }
 
 .order {
-  width: 395px;
+  width: 100%;
   height: 318px;
   background-color: #fafaf5;
   border-radius: 24px;
@@ -530,7 +556,7 @@ img {
   bottom: 16px;
   right: 16px;
   margin-top: 8px;
-}
+} 
 
 /* product */
 
@@ -558,6 +584,13 @@ section a {
   align-items: end;
   color: black;
   justify-content: center;
+}
+
+section p {
+  margin-left: 24px;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 20px;
 }
 
 section li:nth-child(1) {
@@ -677,24 +710,43 @@ a.List-view {
   position: absolute;
 }
 
-@media (max-width: 1239px) {
-  .grid {
-    display: grid;
-    column-gap: 32px;
-    grid-template-columns: auto auto;
-  }
-}
+
+
 
 .grid {
   display: grid;
   column-gap: 32px;
-  grid-template-columns: 395px 395px 395px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
+@media (max-width: 1239px) {
+  .grid {
+    display: grid;
+    column-gap: 32px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid {
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  section {
+    position: relative;
+  }
+  section p{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 
 .grid-container {
   display: inline-grid;
   background-color: #fafaf5;
-  width: 395px;
+  width: 100%;
   height: 444px;
   border-radius: 24px;
   border: 2px solid #e6e6e6;
@@ -702,15 +754,17 @@ a.List-view {
 }
 
 .image-product {
-  width: 395px;
+  /* width: 395px;
   height: 296px;
-  border-radius: 24px 24px 0 0;
+  border-radius: 24px 24px 0 0; */
+  image-rendering: auto;
 }
 
 .image-product > img {
-  width: 395px;
+  width: 100%;
   height: 296px;
   border-radius: 24px 24px 0 0;
+  object-fit: cover;
 }
 
 .name-product {

@@ -27,53 +27,38 @@
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <a class="logo font-newsreader fw-medium" href="#">World Pear</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">Shop</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">Newstand</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">Who we are</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">My profile</a>
-          </li>
-          <li class="hideonmobile">
-            <a class="basket" href="#">Basket (3)</a>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a class="logo font-newsreader fw-medium" href="#">World Pear</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">Shop</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">Newstand</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">Who we are</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">My profile</a></li>
+                <li class="hideonmobile"><a class="basket font-inter" href="#">Basket (3)</a></li>
+                <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="navlink"><a class="font-inter" href="#">Shop</a></li>
+                <li class="navlink"><a class="font-inter" href="#">Newstand</a></li>
+                <li class="navlink"><a class="font-inter" href="#">Who we are</a></li>
+                <li class="navlink"><a class="font-inter" href="#">My profile</a></li>
+                <li class="navlink"><a class="font-inter" href="#">Basker (3)</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- <section>
-      <div class="section-product">
-        <div class="title-product font-newsreader">Produce</div>
-        <div class="day font-inter"><span class="fw-medium">Fresh</span><span class="fw-light"> — August 21,2023</span></div>
-        <ul class="ul-navlink flex">
-            <li ><a  class="Default font-inter "  href="">Default</a></li>
-            <li ><a class="A-Z font-inter" href="">A-Z</a></li>
-            <li ><a class="List-view font-inter" href="">List view</a></li>
-        </ul>
-      </div>
-      <hr />
-    </section> -->
     <section>
       <ul>
-        <li><a class="font-newsreader" href="">Produce</a></li>
+        <li><a class="font-newsreader" href="#">Produce</a></li>
         <li>
-          <a class="font-inter" href=""
+          <p class="font-inter" href=""
             ><span class="fw-medium">Fresh</span
-            ><span class="fw-light"> — August 21,2023</span></a
+            ><span class="fw-light"> — August 21,2023</span></p
           >
         </li>
-        <li><a class="font-inter" href="">Default</a></li>
-        <li><a class="font-inter" href="">A-Z</a></li>
-        <li><a class="font-inter" href="">List view</a></li>
+        <li><a class="font-inter" href="#">Default</a></li>
+        <li><a class="font-inter" href="#">A-Z</a></li>
+        <li><a class="font-inter" href="#">List view</a></li>
       </ul>
       <hr />
     </section>
@@ -101,6 +86,17 @@
           <div class="price-product font-inter fw-semibold">$5.99 / lb</div>
           <p class="description-product">Grown in San Juan Capistrano, CA</p>
         </div>
+        <!-- <div class="grid-container">
+          <div class="image-product">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/706c/77bb/200aaa186b03d756f101124f8f921a28?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gCW5J72qbLA48GTZmJsn86bhP61xQZbVgaw35AuyloR7O~KKxQyNmF~u-C~hENF6xYzP7ZDsS~2ax4HInpWeFMI1Z6u8IGkp-qH~7Sbfpj79gmh2CMf~4xvi269oSkt9rETYZTmKJw5C1EyVhInbszqC5KhhVFsE7KFqABT0jDZi2ChzwIyo4DbT5iybuiffRqktHFLrcST6eZP6wHrhH4cUtIK7becFivU3CzieWBtn724ZxvD6rhbbrZcz2qfquPNnI8QIEz2iE2sfOwkqxR1~XDjUgSeooYpj6Q6G5F4M5DGaEmWWRHU4VUkvmDvFazRpkXdYz5sEj8AqRXHATg__"
+              alt=""
+            />
+          </div>
+          <div class="name-product font-inter fw-semibold">Heirloom tomato</div>
+          <div class="price-product font-inter fw-semibold">$5.99 / lb</div>
+          <p class="description-product">Grown in San Juan Capistrano, CA</p>
+        </div> -->
       </div>
     </main>
   </body>

@@ -19,28 +19,25 @@
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <a class="logo font-newsreader fw-medium" href="#">World Pear</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">Shop</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">Newstand</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">Who we are</a>
-          </li>
-          <li class="hideonmobile navlink">
-            <a class="font-inter" href="#">My profile</a>
-          </li>
-          <li class="hideonmobile">
-            <a class="basket" href="#">Basket (3)</a>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a class="logo font-newsreader fw-medium" href="#">World Pear</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">Shop</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">Newstand</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">Who we are</a></li>
+                <li class="hideonmobile navlink"><a class="font-inter" href="#">My profile</a></li>
+                <li class="hideonmobile"><a class="basket font-inter" href="#">Basket (3)</a></li>
+                <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="navlink"><a class="font-inter" href="#">Shop</a></li>
+                <li class="navlink"><a class="font-inter" href="#">Newstand</a></li>
+                <li class="navlink"><a class="font-inter" href="#">Who we are</a></li>
+                <li class="navlink"><a class="font-inter" href="#">My profile</a></li>
+                <li class="navlink"><a class="font-inter" href="#">Basker (3)</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
       <div class="main-text font-newsreader">
