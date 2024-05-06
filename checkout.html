@@ -2,9 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produce</title>
+    <title>Cart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,13 +44,11 @@
             <a class="font-inter" href="#">My profile</a>
           </li>
           <li class="hideonmobile">
-            <a class="basket font-inter" href="./cart.html"
-              >Basket ( <span id="cartCount"></span> )</a
-            >
+            <a class="basket font-inter" href="#">Basket (3)</a>
           </li>
           <li class="menu-button" onclick="showSideBar()">
-            <a href="#">
-              <svg
+            <a href="#"
+              ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24"
                 viewBox="0 -960 960 960"
@@ -59,15 +56,13 @@
               >
                 <path
                   d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                />
-              </svg>
-            </a>
+                /></svg></a>
           </li>
         </ul>
         <ul class="sidebar">
           <li onclick="hideSideBar()">
-            <a href="#">
-              <svg
+            <a href="#"
+              ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24"
                 viewBox="0 -960 960 960"
@@ -75,62 +70,70 @@
               >
                 <path
                   d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                />
-              </svg>
-            </a>
+                /></svg></a>
           </li>
           <li class="navlink"><a class="font-inter" href="#">Shop</a></li>
           <li class="navlink"><a class="font-inter" href="#">Newstand</a></li>
           <li class="navlink"><a class="font-inter" href="#">Who we are</a></li>
           <li class="navlink"><a class="font-inter" href="#">My profile</a></li>
-          <li class="navlink">
-            <a class="font-inter" href="./cart.html">Basker (3)</a>
-          </li>
+          <li class="navlink"><a class="font-inter" href="#">Basker (3)</a></li>
         </ul>
       </nav>
     </header>
     <section>
-      <ul>
-        <li><a class="font-newsreader" href="#">Produce</a></li>
-        <li>
-          <p class="font-inter" href="">
-            <span class="fw-medium">Fresh</span
-            ><span class="fw-light"> — August 21,2023</span>
-          </p>
-        </li>
-        <li><a class="font-inter" href="#">Default</a></li>
-        <li><a class="font-inter" href="#">A-Z</a></li>
-        <li><a class="font-inter" href="#">List view</a></li>
-      </ul>
+      <div class="flex">
+        <div class="title-basket font-newsreader">Check out</div>
+      </div>
       <hr />
     </section>
     <main>
-      <div class="grid"></div>
+      <div class="check-out-list">
+        <div class="check-out-items">
+            <ul>
+              <li class="check-out-image font-inter">image</li>
+              <li class="check-out-name font-inter">name</li>
+              <li class="check-out-price font-inter">price</li>
+              <li class="check-out-quantity font-inter">quantity</li>
+              <li class="check-out-total-each font-inter">total</li>
+            </ul>
+          <div class="check-out-total">
+            <h2>Total</h2>
+            <div>$32</div>
+          </div>
+        </div>
+        <form class="check-out-information">
+          <h2 class="title font-newsreader">Information</h2>
+          <div>
+            <label for="name" class="font-inter">Name:</label>
+            <input type="text" id="name" class="name font-inter" />
+          </div>
+          <div>
+            <label for="email" class="font-inter">Email:</label>
+            <input type="text" id="email" class="email font-inter" />
+          </div>
+          <div>
+            <label for="address" class="font-inter">Address:</label>
+            <input type="text" id="address" class="address font-inter" />
+          </div>
+          <div>
+            <label for="city" class="font-inter">City:</label>
+            <input type="text" id="city" class="city font-inter" />
+          </div>
+          <div>
+            <label for="country" class="font-inter">Country:</label>
+            <input type="text" id="country" class="country font-inter" />
+          </div>
+          <div>
+            <label for="zip" class="font-inter">Zip Code:</label>
+            <input type="text" id="zip" class="zip font-inter" />
+          </div>
+          <div>
+            <label for="phone" class="font-inter">Phone Number:</label>
+            <input type="text" id="phone" class="phone font-inter" />
+          </div>
+        </form>
+      </div>
     </main>
   </body>
   <script src="index.js"></script>
-  <script>
-    const productContainer = document.querySelector('.grid')
-    product.forEach((product) => {
-      const productElement = document.createElement('div')
-      productElement.classList.add('grid-container')
-      productElement.innerHTML = `
-      <div class="image-product">
-        <img
-          src="${product.image}"
-          alt=""
-        />
-      </div>
-      <div class="name-product font-inter fw-semibold">${product.name}</div>
-      <div class="price-product font-inter fw-semibold">$${product.price} / lb</div>
-      <p class="description-product">${product.description}</p>
-      <button type="button" class="btn-addToCart fw-semibold font-inter">Add to cart</button>
-    `
-      productContainer.appendChild(productElement)
-
-      productElement
-        .querySelector('.btn-addToCart')
-        .addEventListener('click', () => addToCart(product))
-    })
-  </script>
 </html>
