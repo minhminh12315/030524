@@ -295,27 +295,20 @@ hr {
 }
 
 @media (max-width: 800px) {
-  
   .cart {
   display: grid;
   grid-template-columns: 1fr;
 }
-  
 }
-
-
 
 .list-items {
   display: inline-grid;
-
 }
 
 .order {
   display: inline-grid;
 }
 .list-item {
-  width: 100%;
-  height: 159px;
   margin-bottom: 31px;
   background-color: #fafaf5;
   border-radius: 24px;
@@ -332,14 +325,12 @@ hr {
   display: inline;
 }
 
- .cart {
+.cart {
   justify-content: space-between;
   margin-top: 40px;
 }
 
 .list-item {
-  width: 100%;
-  height: 159px;
   margin-bottom: 31px;
   background-color: #fafaf5;
   border-radius: 24px;
@@ -350,12 +341,6 @@ hr {
 
 .image-item > img {
   border-radius: 24px 0 0 24px;
-  overflow: hidden;
-  display: inline;
-}
-
-img {
-  overflow: hidden;
 }
 
 .item-name {
@@ -430,6 +415,7 @@ img {
   line-height: 130%;
 }
 
+.information,
 .order {
   width: 100%;
   height: 318px;
@@ -651,9 +637,6 @@ a.List-view {
   position: absolute;
 }
 
-
-
-
 .grid {
   display: grid;
   column-gap: 32px;
@@ -733,80 +716,25 @@ a.List-view {
   height: 100%;
 }
 
-.check-out-list {
-  display: grid;
-  grid-template-columns: 7fr 3fr;
-  gap: 1rem;
+.item-id {
+  display: none;
 }
 
-.check-out-items {
-  display: inline-grid;
-  background-color: #fafaf5;
-  border-radius: 24px;
-  border: 2px solid #e6e6e6;
-  text-transform: capitalize;
-  text-align: center;
-  height: 140%;
+.information label {
+  font-size: 16px;
+  line-height: 130%;
+  color: #000000;
+  gap: 8px;
 }
 
-.check-out-items ul {
-  width: 100%;
+.information .title {
   display: flex;
-}
-
-.check-out-items li {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.check-out-items .check-out-total {
-  width: 100%;
-  display: flex;
-  justify-content:space-evenly;
-  align-items: flex-end;
-  padding-bottom: 1rem;
-}
-
-.check-out-information {
-  display: flex;
-  width: 100%;
-  height: 130%;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: #fafaf5;
-  border-radius: 24px;
-  border: 2px solid #e6e6e6;
   padding: 1rem;
 }
 
-.check-out-information > .title {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 130%;
-  text-align: center;
+.quantity-checkout {
+  padding-left: 1.5rem;
+  font-size: 20px;
+  font-weight: 400;
 }
-
-.check-out-information label {
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 130%;
-  text-align: center;
-}
-
-.check-out-information div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.check-out-information input {
-  width: 60%;
-  border: 1.5px solid #e6e6e6;
-  border-radius: 8px;
-}
-
-
-

@@ -56,12 +56,13 @@ const addToCart = (product) => {
   // console.log(cart)
 }
 
-
 const updateCartCount = () => {
-  const cartCount = document.getElementById('cartCount')
-  const numberOfUniqueProducts = Object.keys(cart).length
-  cartCount.innerText = numberOfUniqueProducts
-  // console.log(numberOfUniqueProducts)
+  const cartCounts = document.getElementsByClassName('cartCount');
+  const numberOfUniqueProducts = Object.keys(cart).length;
+  
+  for (let i = 0; i < cartCounts.length; i++) {
+    cartCounts[i].innerText = numberOfUniqueProducts;
+  }
 }
 console.log(cart)
 
