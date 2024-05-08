@@ -19,27 +19,71 @@
 
   <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="logo font-newsreader fw-medium" href="#">World Pear</a></li>
-                <li class="hideonmobile navlink"><a class="font-inter" href="#">Shop</a></li>
-                <li class="hideonmobile navlink"><a class="font-inter" href="#">Newstand</a></li>
-                <li class="hideonmobile navlink"><a class="font-inter" href="#">Who we are</a></li>
-                <li class="hideonmobile navlink"><a class="font-inter" href="#">My profile</a></li>
-                <li class="hideonmobile"><a class="basket font-inter" href="#">Basket (3)</a></li>
-                <li class="menu-button" onclick=showSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-            </ul>
-            <ul class="sidebar">
-                <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li class="navlink"><a class="font-inter" href="#">Shop</a></li>
-                <li class="navlink"><a class="font-inter" href="#">Newstand</a></li>
-                <li class="navlink"><a class="font-inter" href="#">Who we are</a></li>
-                <li class="navlink"><a class="font-inter" href="#">My profile</a></li>
-                <li class="navlink"><a class="font-inter" href="#">Basker (3)</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <a class="logo font-newsreader fw-medium" href="homepage.html">World Pear</a>
+          </li>
+          <li class="hideonmobile navlink">
+            <a class="font-inter" href="product.html">Shop</a>
+          </li>
+          <li class="hideonmobile navlink">
+            <a class="font-inter" href="#newStand">Newstand</a>
+          </li>
+          <li class="hideonmobile navlink">
+            <a class="font-inter" href="#whoWeAre">Who we are</a>
+          </li>
+          <li class="hideonmobile navlink">
+            <a class="font-inter" href="#whoWeAre">My profile</a>
+          </li>
+          <li class="hideonmobile">
+            <a class="basket font-inter" href="./cart.html"
+              >Basket ( <span class="cartCount"></span> )</a
+            >
+          </li>
+          <li class="menu-button" onclick="showSideBar()">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar">
+          <li onclick="hideSideBar()">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="navlink"><a class="font-inter" href="#product.html">Shop</a></li>
+          <li class="navlink"><a class="font-inter" href="#newStand">Newstand</a></li>
+          <li class="navlink"><a class="font-inter" href="#whoWeAre">Who we are</a></li>
+          <li class="navlink"><a class="font-inter" href="#whoWeAre">My profile</a></li>
+          <li class="navlink">
+            <a class="font-inter" href="./cart.html"
+              >Basker (<span class="cartCount"></span>)</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
+    <main id="newStand">
       <div class="main-text font-newsreader">
         We're <i>farmers</i>, <i>purveyors</i>, and <i>eaters</i> of organically
         grown food.
@@ -65,32 +109,15 @@
           </div>
         </div>
       </div>
-      <div class="what-we-believe flex">
+      <div class="what-we-believe flex" id="whoWeAre">
         <div class="title font-inter">what we believe</div>
-        <div class="text font-inter">
-          <p>We believe in produce. Tasty produce. Produce like:</p>
-          <br />
-          <p>
-            Apples. Oranges. Limes. Lemons. Guavas. Carrots. Cucumbers. Jicamas.
-            Cauliflowers. Brussels sprouts. Shallots. Japanese eggplants.
-            Asparagus. Artichokes—Jerusalem artichokes, too. Radishes. Broccoli.
-            Baby broccoli. Broccolini. Bok choy. Scallions. Ginger. Cherries.
-            Raspberries. Cilantro. Parsley. Dill.
-          </p>
-          <br />
-          <p>What are we forgetting?</p>
-          <br />
-          <p>
-            Oh! Onions. Yams. Avocados. Lettuce. Arugula (to some, “rocket”).
-            Persian cucumbers, in addition to aforementioned “normal” cucumbers.
-            Artichokes. Zucchinis. Pumpkins. Squash (what some cultures call
-            pumpkins). Sweet potatoes and potato-potatoes. Jackfruit. Monk
-            fruit. Fruit of the Loom. Fruits of our labor (this website).
-            Sorrel. Pineapple. Mango. Gooseberries. Blackberries. Tomatoes.
-            Heirloom tomatoes. Beets. Chives. Corn. Endive. Escarole, which, we
-            swear, we’re vendors of organic produce, but if you asked us to
-            describe what escaroles are...
-          </p>
+        <div class="text font-inter">We believe in produce. Tasty produce. Produce like:
+
+            Apples. Oranges. Limes. Lemons. Guavas. Carrots. Cucumbers. Jicamas. Cauliflowers. Brussels sprouts. Shallots. Japanese eggplants. Asparagus. Artichokes—Jerusalem artichokes, too. Radishes. Broccoli. Baby broccoli. Broccolini. Bok choy. Scallions. Ginger. Cherries. Raspberries. Cilantro. Parsley. Dill. 
+
+            What are we forgetting?
+
+            Oh! Onions. Yams. Avocados. Lettuce. Arugula (to some, “rocket”). Persian cucumbers, in addition to aforementioned “normal” cucumbers. Artichokes. Zucchinis. Pumpkins. Squash (what some cultures call pumpkins). Sweet potatoes and potato-potatoes. Jackfruit. Monk fruit. Fruit of the Loom. Fruits of our labor (this website). Sorrel. Pineapple. Mango. Gooseberries. Blackberries. Tomatoes. Heirloom tomatoes. Beets. Chives. Corn. Endive. Escarole, which, we swear, we’re vendors of organic produce, but if you asked us to describe what escaroles are...
         </div>
       </div>
     </main>

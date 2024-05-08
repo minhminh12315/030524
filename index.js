@@ -53,7 +53,7 @@ const addToCart = (product) => {
   
   localStorage.setItem('cart', JSON.stringify(cart))
   updateCartCount()
-  // console.log(cart)
+  console.log(cart)
 }
 
 const updateCartCount = () => {
@@ -65,5 +65,7 @@ const updateCartCount = () => {
   }
 }
 console.log(cart)
+
+
 
 updateCartCount()
